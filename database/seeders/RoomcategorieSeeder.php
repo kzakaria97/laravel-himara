@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class RoomcategorieSeeder extends Seeder
 {
@@ -14,6 +15,19 @@ class RoomcategorieSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('roomcategories')->insert([       
+            [
+                'name' => 'Single Room'
+            ],
+            [
+                'name' => 'Double Room'
+            ],  
+            [
+                'name' => 'Family Room'
+            ],
+            [
+                'name' => 'Deluxe Room'
+            ],
+        ]);
     }
 }

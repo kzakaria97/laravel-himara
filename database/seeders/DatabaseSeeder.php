@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\CategorieGallerie;
+use App\Models\Photonav;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -33,6 +34,12 @@ class DatabaseSeeder extends Seeder
             SliderSeeder::class,
             ServiceSeeder::class,
             ServiceheaderSeeder::class,
+            PhotonavSeeder::class,
+            NavbarSeeder::class,
+            TeamSeeder::class,
+            TagSeeder::class,
+            RoomcategorieSeeder::class,
+            RoomserviceSeeder::class,
         ]);
     }
 }

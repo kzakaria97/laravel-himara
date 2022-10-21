@@ -14,10 +14,10 @@ background-size: cover;">
         </div>
         <ol class="breadcrumb">
           <li>
-            <a href="index.html">Home</a>
+            <a href="{{route('home')}}">Home</a>
           </li>
           <li>
-            <a href="index.html">Rooms</a>
+            <a href="{{route('roomList')}}">Rooms</a>
           </li>
           <li>Istanbul</li>
         </ol>

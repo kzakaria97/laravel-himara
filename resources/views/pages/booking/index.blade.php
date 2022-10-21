@@ -9,7 +9,7 @@ background-size: cover;">
         <h1>Booking Form</h1>
         <ol class="breadcrumb">
             <li>
-            <a href="index.html">Home</a>
+            <a href="{{route('home')}}">Home</a>
           </li>
           <li>Booking Form</li>
         </ol>

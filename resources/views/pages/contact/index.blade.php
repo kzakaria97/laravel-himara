@@ -10,7 +10,7 @@
             <h1>CONTACT</h1>
             <ol class="breadcrumb">
               <li>
-                <a href="index.html">Home</a>
+                <a href="{{route('home')}}">Home</a>
               </li>
               <li>Contact</li>
             </ol>

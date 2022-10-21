@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-use App\Models\Room;
+use App\Models\Photonav;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Tag extends Model
+class Navbar extends Model
 {
     use HasFactory;
 
-    public function rooms()
+    public function photos()
     {
-        return $this->belongsToMany(Room::class,'Pivotroomtag','tag_id','room_id');
+        return $this->belongsTo(Photonav::class);
     }
 }

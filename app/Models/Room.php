@@ -15,11 +15,11 @@ class Room extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class,'Pivotroomtag');
+        return $this->belongsToMany(Tag::class,'Pivotroomtag','room_id','tag_id');
     }
     public function roomservices()
     {
-        return $this->belongsToMany(Service::class,'Pivotroomservice');
+        return $this->belongsToMany(Service::class,'Pivotroomservice','room_id','roomservice_id');
     }
     public function roomphotos()
     {

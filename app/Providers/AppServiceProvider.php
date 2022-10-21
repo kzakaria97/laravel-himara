@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
-use App\Models\TopBar;
+use App\Models\Navbar;
+use App\Models\Topbar;
+use App\Models\Photonav;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,11 +26,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*', function ($view){            
-            $topbar = TopBar::first();            
-            // $footer = Footer::first();                        
-            $view->with('topbar', $topbar );              
-            // ->with('footer', $footer )                
-         });
+        view()->composer('*', function ($view)
+        {            
+            $topbar = Topbar::first();            
+            $navbar = Navbar::all();            
+            $photoNav = Photonav::first();            
+            $view->with('topbar', $topbar )                
+            ->with('navbar', $navbar )                
+            ->with('photoNav', $photoNav); 
+       });
     }
 }

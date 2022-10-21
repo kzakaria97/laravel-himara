@@ -87,7 +87,7 @@
             <!-- BRAND -->
             <div class="brand">
               <div class="logo">
-                <a href="index.html">
+                <a href="{{route('home')}}">
                   <img src="images/logo.svg" alt="Hotel Himara" />
                 </a>
               </div>
@@ -101,23 +101,23 @@
             <!-- MAIN MENU -->
             <nav id="main-menu" class="main-menu">
               <ul class="menu">
-                <li class="menu-item dropdown active">
-                  <a href="{{route('home')}}">HOME</a>
+                <li class="menu-item {{ request()->is('/') ? 'active' :  ''}} dropdown">
+                  <a href="{{route('home')}}">{{$navbar[0]->element}}</a>
                 </li>
-                <li class="menu-item dropdown">
-                  <a href="{{route('roomList')}}">ROOMS</a>
+                <li class="menu-item {{ request()->is('RoomList') ? 'active' :  ''}} dropdown">
+                  <a href="{{route('roomList')}}">{{$navbar[1]->element}}</a>
                 </li>
-                <li class="menu-item dropdown">
-                  <a href="{{route('team')}}">TEAM</a>
+                <li class="menu-item {{ request()->is('Team') ? 'active' :  ''}} dropdown">
+                  <a href="{{route('team')}}">{{$navbar[2]->element}}</a>
                 </li>
-                <li class="menu-item dropdown">
-                  <a href="{{route('gallerie')}}">GALLERY</a>
+                <li class="menu-item {{ request()->is('Gallery') ? 'active' :  ''}} dropdown">
+                  <a href="{{route('gallerie')}}">{{$navbar[3]->element}}</a>
                 </li>
-                <li class="menu-item dropdown">
-                  <a href="{{route('blog')}}">BLOG</a>
+                <li class="menu-item {{ request()->is('Blog') ? 'active' :  ''}} dropdown">
+                  <a href="{{route('blog')}}">{{$navbar[4]->element}}</a>
                 </li>
-                <li class="menu-item">
-                  <a href="{{route('contact')}}">CONTACT US</a>
+                <li class="menu-item {{ request()->is('Contact') ? 'active' :  ''}} dropdown">
+                  <a href="{{route('contact')}}">{{$navbar[5]->element}}</a>
                 </li>
                 <li class="menu-item menu-btn dropdown">
                   @if (Route::has('login'))

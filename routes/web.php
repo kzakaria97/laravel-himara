@@ -14,6 +14,10 @@ use Illuminate\Foundation\Console\AboutCommand;
 use App\Http\Controllers\CategallerieController;
 use App\Http\Controllers\ServiceheaderController;
 use App\Http\Controllers\CategallerieMainController;
+use App\Http\Controllers\MainteamController;
+use App\Http\Controllers\RoomlistController;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\TeamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,24 +31,18 @@ use App\Http\Controllers\CategallerieMainController;
 */
 
 Route::get('/',[HomeController::class,'index'])->name('home');
-Route::get('/Room', function () {
-    return view('pages.roomList.index');
-})->name('roomList');
+
 Route::get('/booking', function () {
     return view('pages.booking.index');
 })->name('booking');
+
 Route::get('/Contact', function () {
     return view('pages.contact.index');
 })->name('contact');
-Route::get('/RoomList', function () {
-    return view('pages.roomList.index');
-})->name('roomList');
+
 Route::get('/Blog', function () {
     return view('pages.blog.index');
 })->name('blog');
-Route::get('/Team', function () {
-    return view('pages.team.index');
-})->name('team');
 
 //TOPBAR
 Route::get('/TopBar',[TopBarController::class,'index']);
@@ -96,7 +94,7 @@ Route::put('/{id}/updateSlider',[SliderController::class,'update'])->name('updat
 Route::delete('/{id}/deleteSlider',[SliderController::class,'destroy']);
 
 //Service header
-Route::get('/Service',[ServiceheaderController::class,'index'])->name('serviceheader');
+Route::get('/ServiceHeader',[ServiceheaderController::class,'index'])->name('serviceheader');
 Route::post('/storeServiceheader',[ServiceheaderController::class,'store']);
 Route::get('/{id}/editServiceheader',[ServiceheaderController::class,'edit'])->name('editServiceheader');
 Route::put('/{id}/updateServiceheader',[ServiceheaderController::class,'update'])->name('updateServiceheader');
@@ -108,6 +106,26 @@ Route::post('/storeService',[ServiceController::class,'store']);
 Route::get('/{id}/editService',[ServiceController::class,'edit'])->name('editService');
 Route::put('/{id}/updateService',[ServiceController::class,'update'])->name('updateService');
 Route::delete('/{id}/deleteService',[ServiceController::class,'destroy']);
+
+//team front
+Route::get('/Team',[MainteamController::class,'index'])->name('team');
+
+//team back
+Route::get('/teamform',[TeamController::class,'index'])->name('teamform');
+Route::post('/storeTeam',[TeamController::class,'store']);
+Route::get('/{id}/editTeam',[TeamController::class,'edit'])->name('editTeam');
+Route::put('/{id}/updateTeam',[TeamController::class,'update'])->name('updateTeam');
+Route::delete('/{id}/deleteTeam',[TeamController::class,'destroy']);
+
+//tag
+Route::get('/tag',[TagController::class,'index'])->name('tag');
+Route::post('/storeTag',[TagController::class,'store']);
+Route::get('/{id}/editTag',[TagController::class,'edit'])->name('editTag');
+Route::put('/{id}/updateTag',[TagController::class,'update'])->name('updateTag');
+Route::delete('/{id}/deleteTag',[TagController::class,'destroy']);
+
+// Room
+Route::get('/RoomList',[RoomlistController::class,'index'])->name('roomList');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

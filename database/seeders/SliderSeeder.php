@@ -31,17 +31,17 @@ class SliderSeeder extends Seeder
                 'hotelname' => 'Star Luxury Hotel',
                 'title' => 'TOUCH THE DREAM',
                 'subtitle' => 'Live Your Myth In Hotel Himara',
-                'btnfirst' => 'BOOK A ROM NOW',
-                'btnsecond' => 'CONTACT US NOW',
+                'btnfirst' => null,
+                'btnsecond' => null,
             ],
             [
                 'url' => 'slider3.jpg',
                 'star' => 0,
-                'hotelname' => '',
+                'hotelname' => null,
                 'title' => 'TOUCH THE DREAM',
                 'subtitle' => 'Live Your Myth In Hotel Himara',
-                'btnfirst' => '',
-                'btnsecond' => '',
+                'btnfirst' => null,
+                'btnsecond' => null,
             ],
         ]);
     }

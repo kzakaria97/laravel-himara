@@ -10,7 +10,7 @@
             <h1>GALLERY</h1>
             <ol class="breadcrumb">
               <li>
-                <a href="index.html">Home</a>
+                <a href="{{route('home')}}">Home</a>
               </li>
               <li>Gallery</li>
             </ol>
@@ -30,7 +30,7 @@
           </div>
           <div>
             <button>
-              <a href="{{Route('categorieGallerie')}}">Edit</a>
+              <a href="{{Route('categorieGallerie')}}">Edit filter</a>
             </button>
             <button>
               <a href="{{Route('gallerieForm')}}">Add pictures</a>
